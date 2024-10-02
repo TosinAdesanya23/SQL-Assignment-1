@@ -27,8 +27,8 @@ Phone INT
 ```
 CREATE TABLE Products (
 ProductID INT PRIMARY KEY,
-ProductName VARCHAR (255),
-Category VARCHAR(255),
+ProductName VARCHAR (2100),
+Category VARCHAR(50),
 Price DECIMAL (11,3)
 );
 ```
@@ -43,9 +43,38 @@ SaleDate DATE,
 Quantity INT,
 TotalAmount DECIMAL(11, 3)
 );
-```
-## 3.   Data Retrieval and Aggregation
+
+## 2. Data Insertion
 ---
+
+   - Insert at least 5 records into each of the `Customers` and `Products` tables.
+
+```
+INSERT INTO Customers (CustomerID, FirstName, LastName, Email, Phone)
+VALUES (
+1, 'John', 'Doe', 'johndoe@example.com', 1234567890,
+2, 'Jane', 'Smith', 'janesmith@example.com', 9876543210,
+3, 'Michael', 'Johnson', 'michaeljohnson@example.com', 1112223333,
+4, 'Emily', 'Brown', 'emilybrown@example.com', 4445556666,
+5, 'David', 'Miller', 'davidmiller@example.com', 7778889999
+);
+```
+
+
+```
+INSERT INTO Products (ProductID, ProductName, Category, Price)
+VALUES (
+1, 'Laptop', 'Electronics', 999.99,
+2, 'Smartphone', 'Electronics', 799.99,
+3, 'T-Shirt', 'Clothing', 19.99,
+4, 'Jeans', 'Clothing', 49.99,
+5, 'Book', 'Books', 24.99
+);
+
+```
+
+**## 3.Data Retrieval and Aggregation
+**---
    
 ### Write a query to retrieve all customer information.
 
