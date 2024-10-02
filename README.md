@@ -43,11 +43,12 @@ SaleDate DATE,
 Quantity INT,
 TotalAmount DECIMAL(11, 3)
 );
+```
 
 ## 2. Data Insertion
 ---
 
-   - Insert at least 5 records into each of the `Customers` and `Products` tables.
+### Insert at least 5 records into each of the `Customers` and `Products` tables.
 
 ```
 INSERT INTO Customers (CustomerID, FirstName, LastName, Email, Phone)
@@ -59,7 +60,7 @@ VALUES (
 5, 'David', 'Miller', 'davidmiller@example.com', 7778889999
 );
 ```
-
+### Products table
 
 ```
 INSERT INTO Products (ProductID, ProductName, Category, Price)
@@ -70,11 +71,10 @@ VALUES (
 4, 'Jeans', 'Clothing', 49.99,
 5, 'Book', 'Books', 24.99
 );
-
 ```
 
-**## 3.Data Retrieval and Aggregation
-**---
+## 3.Data Retrieval and Aggregation
+---
    
 ### Write a query to retrieve all customer information.
 
