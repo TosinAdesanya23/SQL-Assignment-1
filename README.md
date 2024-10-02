@@ -53,7 +53,15 @@ ORDER BY SUM(totalamount)DESC
 LIMIT 1
 
 ```
+OR
+```
 
+SELECT c.customerID, SUM(s.TotalAmount) AS TotalSales
+FROM customers c
+JOIN Sales s
+ON s.customerID = c.customerID
+GROUP BY c.customerID
+```
 
 ### Write a query to find the total number of products sold in each category.
 
