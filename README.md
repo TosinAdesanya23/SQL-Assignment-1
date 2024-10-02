@@ -86,12 +86,12 @@ WHERE ProductID = 2
 DELETE FROM Sales WHERE SaleID = 14
 ```
 
-5. Views:
+# VIEWS
    - Create a view named `CustomerSalesView` that shows the `CustomerID`, `FirstName`, `LastName`, and the total amount they have spent.
 CREATE VIEW [CustomerSalesView ] 
 SELECT CustomerID, FirstName, LastName
 
 
-6. Joins and Advanced Queries:
+## Joins and Advanced Queries
    - Write a query to join `Customers` and `Sales` to display each customer's total number of purchases.
 
