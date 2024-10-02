@@ -57,11 +57,14 @@ LIMIT 1
 
 ### Write a query to find the total number of products sold in each category.
 
-
-
+```
+SELECT ProductID, SUM(Quantity)
+FROM Sales
+GROUP BY ProductID
+```
 
 ## Update and Delete Operations
-
+---
 
 ### Write a query to update a customer’s email address
 
