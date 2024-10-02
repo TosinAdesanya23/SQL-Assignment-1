@@ -61,6 +61,7 @@ FROM customers c
 JOIN Sales s
 ON s.customerID = c.customerID
 GROUP BY c.customerID
+LIMIT 1
 ```
 
 ### Write a query to find the total number of products sold in each category.
