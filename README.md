@@ -44,7 +44,16 @@ GROUP BY productID
  |5       |        100|
 
 
-### Write a query to find the customers who has spent the most money
+### Write a query to find the customer who has spent the most money
+```
+Select customerid, SUM(totalamount) AS SumTotal
+FROM customersalesview
+GROUP BY customerid
+ORDER BY SUM(totalamount)DESC
+LIMIT 1
+
+```
+
 
 ### Write a query to find the total number of products sold in each category.
 
