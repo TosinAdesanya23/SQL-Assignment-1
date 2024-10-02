@@ -1,7 +1,50 @@
 # SQL-Assignment-1
 I have been hired as a Database Developer for a retail company that wants to enhance its customer and sales data management. My task is to design and implement a database to manage this information effectively. I will Follow the steps below to complete my assignment:
 
-## Data Retrieval and Aggregation
+
+## 1. Database and Table Creation:
+---
+
+### Create a database named `RetailDB`.
+```
+CREATE DATABASE RetailDB;
+```
+
+### In `RetailDB`, create the following tables:
+ - `Customers`: To store customer information.
+
+```
+CREATE TABLE Customers (
+CustomerID INT PRIMARY KEY,
+FirstName VARCHAR(255),
+LastName VARCHAR(255),
+Email VARCHAR(255),
+Phone INT
+);
+```
+- `Products`: To store product information.
+
+```
+CREATE TABLE Products (
+ProductID INT PRIMARY KEY,
+ProductName VARCHAR (255),
+Category VARCHAR(255),
+Price DECIMAL (11,3)
+);
+```
+
+ - `Sales`: To store sales transactions.
+```
+CREATE TABLE Sales (
+SaleID INT PRIMARY KEY,
+CustomerID INT FOREIGN KEY REFERENCES Customers(CustomerID),
+ProductID INT FOREIGN KEY REFERENCES Products(ProductID),
+SaleDate DATE,
+Quantity INT,
+TotalAmount DECIMAL(11, 3)
+);
+
+##  Data Retrieval and Aggregation
 ---
    
 ### Write a query to retrieve all customer information.
