@@ -44,22 +44,11 @@ GROUP BY productID
  |5       |        100|
 
 
-SELECT c.CustomerID, SUM(s.quantity * p.price) AS total_spent
-FROM sales s
-JOIN products p 
-ON s.ProductID = p.ProductID
-INNER JOIN customers c ON s.CustomerID = c.CustomerID
-GROUP BY c.CustomerID
-ORDER BY total_spent DESC
-LIMIT 1 ;
+### Write a query to find the customers who has spent the most money
 
-   - Write a query to find the total number of products sold in each category.
+### Write a query to find the total number of products sold in each category.
 
-SELECT p.Category, SUM(s.Quantity) AS TotalSold 
-FROM products p
-JOIN sales s
-ON s.productID = p.productID
-GROUP BY p.Category
+
 
 
 ## Update and Delete Operations
